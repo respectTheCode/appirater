@@ -43,6 +43,14 @@ extern NSString *const kAppiraterCurrentVersion;
 extern NSString *const kAppiraterRatedCurrentVersion;
 extern NSString *const kAppiraterDeclinedToRate;
 
+#if ENABLE_APPIRATER != 1
+#define APPIRATER_APP_ID -1
+#define APPIRATER_MESSAGE @""
+#define APPIRATER_DAYS_UNTIL_PROMPT 9999999
+#define APPIRATER_USES_UNTIL_PROMPT 9999999
+#define APPIRATER_TIME_BEFORE_REMINDING 9999999
+#endif
+
 /*
  Place your Apple generated software id here.
  */
